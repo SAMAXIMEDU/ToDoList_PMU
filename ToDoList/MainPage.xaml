@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDoList.MainPage">
+
+    <ScrollView BackgroundColor="White">
+        <StackLayout BackgroundColor="#00000000" x:Name="Tasks">
+            <FlexLayout BackgroundColor="#00000000" HeightRequest="50" JustifyContent="SpaceBetween">
+                <Entry
+                    Placeholder="Введите задачу"
+                    PlaceholderColor="Gray"
+                    FlexLayout.Basis="300"
+                    TextColor="Black"
+                    x:Name="TaskText"/>
+                <ImageButton 
+                    Source="https://www.downloadclipart.net/medium/undo-png-picture.png" 
+                    WidthRequest="50" 
+                    HeightRequest="50" 
+                    HorizontalOptions="End" 
+                    BackgroundColor="#00000000" 
+                    x:Name="Undo"
+                    Pressed="Undo_OnPressed"/>
+                <ImageButton 
+                    Source="https://icons.veryicon.com/png/256/miscellaneous/customer-service-icon-library/add-more.png" 
+                    WidthRequest="50" 
+                    HeightRequest="50" 
+                    HorizontalOptions="End" 
+                    BackgroundColor="#00000000" 
+                    x:Name="ImageButton"
+                    Pressed="ImageButton_OnPressed"/>
+            </FlexLayout>
+            <BoxView Background="Black" HeightRequest="1"/>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
